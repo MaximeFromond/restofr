@@ -8,6 +8,7 @@ Version: 1.0
 html{
 	padding: 0!important;
 	margin: 0!important;
+	font-family: 'Quicksand', sans-serif;
 }
 
 /*///////////////  HEADER  \\\\\\\\\\\\\\ */
@@ -15,25 +16,40 @@ html{
 
 .nav {
 	display: flex;
-	justify-content: flex-end;
 	padding: 0;
 	margin-top: -32px;
 
 }
 
 .nav ul {
+	display: inline-flex;
 	list-style: none;
 }
 
 .nav li a {
 
 	text-decoration: none;
+	margin-left: 3em;
 }
 
 .logo {
-	float: left;
+	justify-content: flex-start;
 	margin-top: -32px;
 }
 
+.menu {
+	margin-left: 40em;
+	margin-top: 2em;
+	justify-content: flex-end;
+}
+
+.sliderheader {
+	height: 185px;
+}
+
 /*///////////////  END OF HEADER  \\\\\\\\\\\\\\ */
+
+body {
+	font-family: 'Quicksand', sans-serif;
+}
 

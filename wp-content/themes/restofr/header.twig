@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width">
+	{{wp_head}}
+</head>
+
+<div class="nav">
+	<div class="logo">
+		<img src="{{ logo }}" alt="">
+	</div>
+	<div class="menu">
+		<ul>
+			{% for item in menu.get_items %}
+				<li>
+					<a href="{{item.get_link}}">{{item.title}}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+
+{{ var_test_global }}
+
+
+
+
+
