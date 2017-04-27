@@ -1,15 +1,20 @@
 {% include 'header.twig' %}
 
-
+ <!-- TimberPost(19).content => Permet de récuperer l'id du post et d'en afficher son contenu -->
 <section style="background: center center / cover url({{ TimberPost(19).thumbnail }})" class="sliderheader">
      
      {{ TimberPost(19).content }}
       
  </section>
+
+
+ <!-- post.title permet de récuperer les titres du custom post "plats" -->
+ <!-- post.content permet de récuperer les contenus du custom post "plats" -->
+ <!-- post.get_field permet de récuperer les prix (chiffre) du custom post "plats" -->
 <div class="plats">
 {% for post in plats %}
     <div class="plat">
-        <h3>{{ post.title }}</h3>
+        <h3>{{ post.title }}</h3> 
         <p>{{ post.content }}</p>
         <p>{{post.get_field('prix')}} €</p>
     </div>
@@ -18,12 +23,11 @@
 
 <!-- SwiperSlider -->
 <div class="swiper-container">
-	<div class="swiper-pagination"></div>
     <div class="swiper-wrapper">
 		{% for post in plats_en_avant %}
 		    <div class="swiper-slide">
 		        <h3>{{ post.title }}</h3>
-		        <a>{{ post.thumbnail }}</a>
+		        <a href=""><img src="{{ post.thumbnail }}"></a>
 		        <p>{{ post.content }}</p>
 		        <p>{{post.get_field('prix')}} €</p>
 		    </div>
@@ -36,9 +40,7 @@
 
 
 
-
-
-
+		
 
 	{% include 'footer.twig' %}
 

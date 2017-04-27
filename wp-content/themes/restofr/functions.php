@@ -1,12 +1,13 @@
 <?php 
 
+// Recupere le style 
 function resto_styles() {
 	wp_enqueue_style( 'custom styles', get_stylesheet_uri() );
 } 
 
 add_action( 'wp_enqueue_scripts', 'resto_styles' );
 
-
+// Menu navigation
 register_nav_menus( array(
 'header-menu' => 'Navigation principale'
 ) );
@@ -19,6 +20,7 @@ function add_to_context($data){
     $data['logo'] = $image[0];
     return $data;
 }
+
 
 add_theme_support( 'post-thumbnails' );
 
