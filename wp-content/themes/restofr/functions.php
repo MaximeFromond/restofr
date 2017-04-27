@@ -22,8 +22,10 @@ function add_to_context($data){
 
 add_theme_support( 'post-thumbnails' );
 
+add_post_type_support( 'plats', 'thumbnail' );
+
 add_filter('timber_context', 'add_to_context');
 
 add_theme_support( 'custom-logo' ); 
 
-?>
+

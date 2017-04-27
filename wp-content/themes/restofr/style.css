@@ -35,21 +35,59 @@ html{
 .logo {
 	justify-content: flex-start;
 	margin-top: -32px;
+	padding-top: 2em;
+	padding-left: 1em;
 }
 
 .menu {
 	margin-left: 40em;
-	margin-top: 2em;
+	margin-top: 3em;
 	justify-content: flex-end;
 }
 
 .sliderheader {
 	height: 185px;
+	filter: blur(1px);
 }
 
 /*///////////////  END OF HEADER  \\\\\\\\\\\\\\ */
 
 body {
 	font-family: 'Quicksand', sans-serif;
+	margin: 0;
 }
 
+/*///////////////  SLIDER  \\\\\\\\\\\\\\ */
+
+.swiper-container {
+        width: 100%;
+        height: 300px;
+        margin: 20px auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+
+   /*///////////////  FOOTER  \\\\\\\\\\\\\\ */
+
+.footer {
+	height: 15em;
+	background-color: #333333;
+}

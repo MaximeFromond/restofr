@@ -1,4 +1,4 @@
-	{% include 'header.twig' %}
+{% include 'header.twig' %}
 
 
 <section style="background: center center / cover url({{ TimberPost(19).thumbnail }})" class="sliderheader">
@@ -6,3 +6,48 @@
      {{ TimberPost(19).content }}
       
  </section>
+<div class="plats">
+{% for post in plats %}
+    <div class="plat">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.content }}</p>
+        <p>{{post.get_field('prix')}} €</p>
+    </div>
+{% endfor %}
+</div>
+
+<!-- SwiperSlider -->
+<div class="swiper-container">
+	<div class="swiper-pagination"></div>
+    <div class="swiper-wrapper">
+		{% for post in plats_en_avant %}
+		    <div class="swiper-slide">
+		        <h3>{{ post.title }}</h3>
+		        <a>{{ post.thumbnail }}</a>
+		        <p>{{ post.content }}</p>
+		        <p>{{post.get_field('prix')}} €</p>
+		    </div>
+		{% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+
+
+
+
+
+
+	{% include 'footer.twig' %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+	<script> var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 4,
+        paginationClickable: true,
+        spaceBetween: 30,
+        freeMode: true
+    }); </script>
