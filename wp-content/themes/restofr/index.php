@@ -25,6 +25,15 @@ $args_en_avant = array(
 	    )
     ),
 );
+
+// Création de la variable blog permetant l'ajout des articles au context
+$blog = array(
+        'post_type' => 'post',
+        'posts_per_page' => 4
+);
+$context['articles'] = Timber::get_posts($blog);
+
+
 //La variable $plats_en_avant est égale à m'ensemble des plats mis en avant grace à "get_post"
 $plats_en_avant = Timber::get_posts( $args_en_avant );
 

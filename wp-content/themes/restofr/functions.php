@@ -7,6 +7,12 @@ function resto_styles() {
 
 add_action( 'wp_enqueue_scripts', 'resto_styles' );
 
+function add_theme_scripts() {
+    
+        wp_register_script( get_template_directory_uri().'/js/script.js' );
+}
+
+
 // Menu navigation
 register_nav_menus( array(
 'header-menu' => 'Navigation principale'
