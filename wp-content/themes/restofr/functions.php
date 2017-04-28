@@ -3,14 +3,11 @@
 // Recupere le style 
 function resto_styles() {
 	wp_enqueue_style( 'custom styles', get_stylesheet_uri() );
+    wp_enqueue_script( 'global_script', get_template_directory_uri().'/js/script.js' );
 } 
 
 add_action( 'wp_enqueue_scripts', 'resto_styles' );
 
-function add_theme_scripts() {
-    
-        wp_register_script( get_template_directory_uri().'/js/script.js' );
-}
 
 
 // Menu navigation

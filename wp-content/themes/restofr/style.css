@@ -12,6 +12,11 @@ html{
 	font-family: 'Quicksand', sans-serif;
 }
 
+body {
+	font-family: 'Quicksand', sans-serif;
+	margin: 0;
+}
+
 /*///////////////  HEADER  \\\\\\\\\\\\\\ */
 
 
@@ -52,11 +57,6 @@ html{
 
 /*///////////////  END OF HEADER  \\\\\\\\\\\\\\ */
 
-body {
-	font-family: 'Quicksand', sans-serif;
-	margin: 0;
-}
-
 /*///////////////  SLIDER  \\\\\\\\\\\\\\ */
 
 .swiper-container {
@@ -89,11 +89,16 @@ body {
 
 
 
+
+
+/*///////////////  BLOG \\\\\\\\\\\\\\ */
+
 .sizebgblog {
 	width: 100px;
 	height: 10em;
 }
 
+/*///////////////  END OF BLOG  \\\\\\\\\\\\\\ */
 
 
 
