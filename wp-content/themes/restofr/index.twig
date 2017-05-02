@@ -27,7 +27,7 @@
     <div class="swiper-wrapper">
 		{% for post in plats_en_avant %}
 		    <div class="swiper-slide flex column center center-h">
-		    	<div style="background: center center / cover url({{ post.thumbnail }})" class="img w70 h10em ">
+		    	<div style="background: center center / cover url({{ post.thumbnail }})" class=" w70 h10em ">
                 </div>
 		        <h3>{{ post.title }}</h3>
 		        <p>{{ post.content }}</p>
@@ -42,12 +42,12 @@
 
 	<!-- Les Articles de blog -->
 <section class="blog">
-    <h2>Derniers Articles</h2>
+    <h2 class="flex center-h flex-start mt-5 mb-2 ml-26">Les News</h2>
     <div>
         {% for post in articles %}
-		<div>
+		<div class="flex column center center-h">
             <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
-        <div style="background: center center / cover url({{ post.thumbnail }})" class="sizebgblog">
+        <div style="background: center center / cover url({{ post.thumbnail }})" class="sizebgblog w70 h10em  ">
         </div>
    		</div>
     </div>
@@ -55,9 +55,9 @@
 </section>
 
 <section>
-    <h2>Restaurants</h2>
+    <h2 class="flex center-h flex-start mt-5 mb-2 ml-25">Les Restaurants</h2>
     <div class="restaurants">
-       <div class="json"></div>
+       <div class="json" style="display: grid;justify-content: center;text-align: center;"></div>
     </div>
 </section>
 
