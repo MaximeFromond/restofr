@@ -1,7 +1,5 @@
 <?php
 
-wp_head(); 
-
 
 $context = Timber::get_context();
 $post = new TimberPost();

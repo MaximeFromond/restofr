@@ -1,7 +1,7 @@
 {% include 'header.twig' %}
 
  <!-- TimberPost(19).content => Permet de récuperer l'id du post et d'en afficher son contenu -->
-<section style="background: center center / cover url({{ TimberPost(19).thumbnail }})" class="sliderheader">
+<section style="background: center center / cover url({{ TimberPost(19).thumbnail }})" class="sliderheader h300">
      
      {{ TimberPost(19).content }}
       
@@ -11,9 +11,9 @@
  <!-- post.title permet de récuperer les titres du custom post "plats" -->
  <!-- post.content permet de récuperer les contenus du custom post "plats" -->
  <!-- post.get_field permet de récuperer les prix (chiffre) du custom post "plats" -->
-<div class="plats">
+<div class="flex row wrap center center-h">
 {% for post in plats %}
-    <div class="plat">
+    <div class="plat w45 flex between center-h pl-1 pr-1">
         <h3>{{ post.title }}</h3> 
         <p>{{ post.content }}</p>
         <p>{{post.get_field('prix')}} €</p>
@@ -21,12 +21,13 @@
 {% endfor %}
 </div>
 
+<h2 class="flex center-h flex-start mt-3">Les TOP plats</h2>
 <!-- SwiperSlider -->
 <div class="swiper-container">
     <div class="swiper-wrapper">
 		{% for post in plats_en_avant %}
-		    <div class="swiper-slide">
-		    	<div style="background: center center / cover url({{ post.thumbnail }})">
+		    <div class="swiper-slide flex column center center-h">
+		    	<div style="background: center center / cover url({{ post.thumbnail }})" class="img w100 h10em ">
                 </div>
 		        <h3>{{ post.title }}</h3>
 		        <p>{{ post.content }}</p>
@@ -61,9 +62,6 @@
 </section>
 
 
-
-		
-	{% include 'footer.twig' %}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>

@@ -10,6 +10,8 @@ $blog = array(
 
 $context['articles'] = Timber::get_posts($blog);
 $post = new TimberPost();
+
+
 $context['post'] = $post;
 
-Timber::render('page-blog.twig', $context);
+Timber::render('page-articles.twig', $context);
