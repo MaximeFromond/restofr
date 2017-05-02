@@ -21,13 +21,13 @@
 {% endfor %}
 </div>
 
-<h2 class="flex center-h flex-start mt-3">Les TOP plats</h2>
+<h2 class="flex center-h flex-start mt-5 mb-2 ml-25">Les TOP plats</h2>
 <!-- SwiperSlider -->
 <div class="swiper-container">
     <div class="swiper-wrapper">
 		{% for post in plats_en_avant %}
 		    <div class="swiper-slide flex column center center-h">
-		    	<div style="background: center center / cover url({{ post.thumbnail }})" class="img w100 h10em ">
+		    	<div style="background: center center / cover url({{ post.thumbnail }})" class="img w70 h10em ">
                 </div>
 		        <h3>{{ post.title }}</h3>
 		        <p>{{ post.content }}</p>
