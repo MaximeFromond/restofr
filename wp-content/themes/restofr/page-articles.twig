@@ -2,18 +2,16 @@
 
 {% block content %}
 
-<div class="">
+<div>
     <section class="blog">
         <h2>{{ post.title }}</h2>
         <div>
             {% for post in articles %}
 
                 <div class="articles">
-                <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
-                <div style="background: center center / cover url()">
+                    <h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
+                <div style="background: center center / cover url()"></div>
                 </div>
-                </div>
-
 
             {% endfor %}
         </div>

@@ -77,6 +77,11 @@ body {
   height: 10em; }
 
 /*///////////////  END OF BLOG  \\\\\\\\\\\\\\ */
+.single img {
+  width: 50%;
+  height: 50%;
+  margin-left: 15em; }
+
 /*///////////////  FOOTER  \\\\\\\\\\\\\\ */
 .footer {
   height: 15em;
@@ -230,6 +235,9 @@ body {
 .ml-3 {
   margin-left: 3em; }
 
+.ml-4 {
+  margin-left: 4em; }
+
 .ml-25 {
   margin-left: 25em; }
 
@@ -321,3 +329,21 @@ body {
   -ms-flex-direction: row;
   -webkit-flex-direction: row;
   flex-direction: row; }
+
+.c1 {
+  color: red; }
+
+.c2 {
+  color: yellow; }
+
+.c3 {
+  color: blue; }
+
+.c4 {
+  color: green; }
+
+.c5 {
+  color: orange; }
+
+.c6 {
+  color: purple; }
